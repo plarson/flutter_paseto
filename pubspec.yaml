@@ -8,10 +8,8 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cryptography:
-    path: /Users/plarson/Source/bitgalaxytech/OpenSource/dint-dev/cryptography/cryptography
-  cryptography_flutter:
-    path: /Users/plarson/Source/bitgalaxytech/OpenSource/dint-dev/cryptography/cryptography_flutter
+  cryptography: ^2.5.0
+  cryptography_flutter: ^2.3.0
   equatable: ^2.0.5
   flutter:
     sdk: flutter
