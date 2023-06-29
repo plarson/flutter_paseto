@@ -1,0 +1,25 @@
+name: paseto
+description: Paseto is everything you love about JOSE (JWT, JWE, JWS) without any of the many design deficits that plague the JOSE standards.
+version: 1.0.0
+homepage: https://github.com/plarson/flutter_paseto
+
+environment:
+  sdk: '>=3.1.0-87.0.dev <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  cryptography:
+    path: /Users/plarson/Source/bitgalaxytech/OpenSource/dint-dev/cryptography/cryptography
+  cryptography_flutter:
+    path: /Users/plarson/Source/bitgalaxytech/OpenSource/dint-dev/cryptography/cryptography_flutter
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  hex: ^0.2.0
+  meta: ^1.9.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^5.0.0+1

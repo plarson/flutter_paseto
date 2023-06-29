@@ -1,0 +1,4 @@
+enum Purpose {
+  local,
+  public;
+}
