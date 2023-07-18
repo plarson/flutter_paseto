@@ -8,8 +8,16 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cryptography: ^2.5.0
-  cryptography_flutter: ^2.3.0
+  cryptography:
+    git:
+      url: https://github.com/plarson/flutter_cryptography.git
+      ref: plarson/disable-mac-verification
+      path: cryptography
+  cryptography_flutter:
+    git:
+      url: https://github.com/plarson/flutter_cryptography.git
+      ref: plarson/disable-mac-verification
+      path: cryptography_flutter
   equatable: ^2.0.5
   flutter:
     sdk: flutter
