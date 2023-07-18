@@ -6,6 +6,8 @@
 
 [Paseto](https://paseto.io) is everything you love about JOSE (JWT, JWE, JWS) without any of the many design deficits that plague the JOSE standards. 
 
+Requires a patched version of [Flutter cryptography](https://github.com/plarson/flutter_cryptography)
+
 ## Decode a Token into a Message
 
 Paseto converts Token strings into Message objects. Paseto tokens are either in local mode or public mode depending on your use case. 
