@@ -43,7 +43,7 @@ main () async {
 }
 ```
 
-### Decide Public Signed Tokens
+### Decode Public Signed Tokens
 
 Public mode tokens are unencrypted, and the module will verify the signature.
 
