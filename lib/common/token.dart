@@ -102,7 +102,10 @@ class Token extends Equatable {
           publicKey: publicKey,
         );
       case Version.v4:
-        throw UnsupportedError('Unsupported version');
+        return PublicV4.verify(
+          this,
+          publicKey: publicKey,
+        );
     }
   }
 
@@ -181,7 +184,19 @@ class Token extends Equatable {
             );
         }
       case Version.v4:
-        throw UnimplementedError();
+        switch (header.purpose) {
+          case Purpose.local:
+            throw UnimplementedError();
+          case Purpose.public:
+            return PayloadPublic(
+              message:
+                  bytes.sublist(0, bytes.length - PublicV4.signatureLength),
+              signature: bytes.sublist(
+                bytes.length - PublicV4.signatureLength,
+                bytes.length,
+              ),
+            );
+        }
     }
   }
 

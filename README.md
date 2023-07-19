@@ -17,7 +17,7 @@
 | v3.local  | ✅          |
 | v3.public | ✅          |
 | v4.local  | ❌          |
-| v4.public | ❌          |
+| v4.public | ✅          |
 | PASERK    | ❌          |
 
 
