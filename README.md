@@ -17,7 +17,8 @@
 | v3.local  | ✅          |
 | v3.public | ✅          |
 | v4.local  | ❌          |
-| v4.public | ✅          |
+| v4.public | ❌          |
+| PASERK    | ❌          |
 
 
 Requires a patched version of [Flutter cryptography](https://github.com/plarson/flutter_cryptography/tree/plarson/disable-mac-verification) that disables MAC verification.
