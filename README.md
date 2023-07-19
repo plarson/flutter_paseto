@@ -6,6 +6,20 @@
 
 [Paseto](https://paseto.io) is everything you love about JOSE (JWT, JWE, JWS) without any of the many design deficits that plague the JOSE standards. 
 
+## Support
+
+| Version   | Implemented |
+| -------   | --:         |
+| v1.local  | ✅          |
+| v1.public | ✅          |
+| v2.local  | ✅          |
+| v2.public | ✅          |
+| v3.local  | ✅          |
+| v3.public | ✅          |
+| v4.local  | ❌          |
+| v4.public | ✅          |
+
+
 Requires a patched version of [Flutter cryptography](https://github.com/plarson/flutter_cryptography/tree/plarson/disable-mac-verification) that disables MAC verification.
 
 ## Decode a Token into a Message
