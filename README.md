@@ -21,7 +21,7 @@
 | PASERK    | ❌          |
 
 
-Requires a patched version of [Flutter cryptography](https://github.com/plarson/flutter_cryptography/tree/plarson/disable-mac-verification) that disables MAC verification.
+Requires a patched version of [flutter_cryptography](https://github.com/plarson/flutter_cryptography/tree/plarson/disable-mac-verification) that disables MAC verification.
 
 ## Decode a Token into a Message
 
