@@ -207,6 +207,7 @@ class Token extends Equatable {
       header: header,
       payload: payload,
       footer: footer,
+      implicit: header.version == Version.v4 ? [] : null,
     );
   }
 
@@ -229,6 +230,7 @@ class Token extends Equatable {
     required Header header,
     required Payload payload,
     List<int>? footer,
+    List<int>? implicit,
   }) {
     final components = [
       Uint8List.fromList(header.bytes),
@@ -249,6 +251,9 @@ class Token extends Equatable {
       components.add(Uint8List.fromList(footer));
     } else {
       components.add(Uint8List(0));
+    }
+    if (implicit != null) {
+      components.add(Uint8List.fromList(implicit));
     }
     return _preAuthenticationEncoding(components);
   }

@@ -76,7 +76,6 @@ class Message extends Equatable {
     );
   }
 
-  /// Multiplex encryption to correct version
   static Future<Message> _encrypt(
     Package package, {
     required Version version,
@@ -111,11 +110,17 @@ class Message extends Equatable {
           ),
         );
       case Version.v4:
-        throw UnimplementedError();
+        return Message(
+          header: LocalV4.header,
+          package: package,
+          payload: await LocalV4.encrypt(
+            package,
+            secretKey: secretKey,
+          ),
+        );
     }
   }
 
-  /// Multiplex signing to correct version
   static Future<Message> _sign(
     Package package, {
     required Version version,
@@ -143,7 +148,14 @@ class Message extends Equatable {
           ),
         );
       case Version.v4:
-        throw UnimplementedError();
+        return Message(
+          header: PublicV4.header,
+          package: package,
+          payload: await PublicV4.sign(
+            package,
+            keyPair: keyPair,
+          ),
+        );
     }
   }
 

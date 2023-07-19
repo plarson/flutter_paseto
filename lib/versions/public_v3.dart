@@ -18,7 +18,7 @@ class PublicV3 {
     if (payload == null) {
       throw UnsupportedError('Invalid payload');
     }
-    final isValid = await Ed25519().verify(
+    final isValid = await Ecdsa.p384(Sha384()).verify(
       token.standardPreAuthenticationEncoding,
       signature: Signature(
         payload.signature!,
@@ -38,9 +38,9 @@ class PublicV3 {
     Package package, {
     required KeyPair keyPair,
   }) async {
-    final signature = await Ed25519().sign(
+    final signature = await Ecdsa.p384(Sha384()).sign(
       Token.preAuthenticationEncoding(
-        header: PublicV2.header,
+        header: PublicV3.header,
         payload: PayloadPublic(message: package.content),
         footer: package.footer,
       ),

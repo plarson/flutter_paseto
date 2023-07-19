@@ -40,9 +40,10 @@ class PublicV4 {
   }) async {
     final signature = await Ed25519().sign(
       Token.preAuthenticationEncoding(
-        header: PublicV2.header,
+        header: PublicV4.header,
         payload: PayloadPublic(message: package.content),
         footer: package.footer,
+        implicit: [],
       ),
       keyPair: keyPair,
     );
