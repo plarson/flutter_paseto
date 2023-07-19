@@ -181,7 +181,7 @@ class Token extends Equatable {
             );
         }
       case Version.v4:
-        throw Exception('Unsupported version');
+        throw UnimplementedError();
     }
   }
 
@@ -211,7 +211,7 @@ class Token extends Equatable {
     );
   }
 
-  Uint8List get localAAdPreAuthenticationEncoding {
+  Uint8List get localAADPreAuthenticationEncoding {
     final payload = payloadLocal;
     if (payload == null) throw UnsupportedError('Invalid payload.');
     final nonce = payload.nonce;

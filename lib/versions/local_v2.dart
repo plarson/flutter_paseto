@@ -31,7 +31,7 @@ class LocalV2 {
         nonce: nonce.bytes,
         mac: Mac.empty,
       ),
-      aad: token.localAAdPreAuthenticationEncoding,
+      aad: token.localAADPreAuthenticationEncoding,
       secretKey: secretKey,
     );
     return Package(
