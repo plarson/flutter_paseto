@@ -35,7 +35,7 @@ Local mode tokens contain encrypted data, and must be decrypted.
 main () async {
   // The same symmetric key the token was signed with.
   final secretKey = SecretKey();
-  // The local encrypted paceto token.
+  // The local encrypted Paseto token.
   const tokenString = 'v4.local.payloadBase64.footerBase64';
   // Turns the string into a Token object.
   final token = await Token.fromString(tokenString);
@@ -71,7 +71,7 @@ Local mode tokens contain encrypted data, and must be encrypted.
 main () async {
   // The  symmetric key to encrypt with.
   final secretKey = SecretKey();
-  // Encrypt the content into a Paceto Message object.
+  // Encrypt the content into a Paseto Message object.
   final message = await Message.encryptString(
     'Hello World!',
     version: Version.v2,
@@ -90,7 +90,7 @@ Public mode tokens are unencrypted, and the module will sign the Message.
 main () async {
   // An asymmetric ED25519 KeyPair to sign and verify the message.
   final keyPair = await Ed25519().newKeyPair();
-  // Sign the content with the Paceto version you are using.
+  // Sign the content with the Paseto version you are using.
   final message = await Message.signString(
     'Hello World!',
     version: Version.v4,
