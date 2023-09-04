@@ -99,7 +99,10 @@ class LocalV1 {
     if (expectedMac != mac) {
       throw ArgumentError('Invalid mac', 'message');
     }
-    final content = await cipher.decrypt(
+    final cipherWithoutMac = AesCtr.with256bits(
+      macAlgorithm: MacAlgorithm.empty,
+    );
+    final content = await cipherWithoutMac.decrypt(
       SecretBox(
         secretBox.cipherText,
         nonce: nonce.bytes.sublist(halfNonceLength, nonceLength),

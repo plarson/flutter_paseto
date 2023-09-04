@@ -20,9 +20,6 @@
 | v4.public | ✅          |
 | PASERK    | ❌          |
 
-
-Requires a patched version of [flutter_cryptography](https://github.com/plarson/flutter_cryptography/tree/plarson/disable-mac-verification) that disables MAC verification.
-
 ## Decode a Token into a Message
 
 Paseto converts Token strings into Message objects. Paseto tokens are either in local mode or public mode depending on your use case. 
