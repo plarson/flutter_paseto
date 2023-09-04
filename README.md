@@ -1,4 +1,4 @@
-# flutter_paseto
+# paseto
 
   
 [![pub](https://img.shields.io/pub/v/paseto)](https://pub.dartlang.org/packages/paseto)

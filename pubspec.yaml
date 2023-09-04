@@ -4,8 +4,8 @@ version: 1.0.0
 homepage: https://github.com/plarson/flutter_paseto
 
 environment:
-  sdk: '>=3.1.0-87.0.dev <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.3.0"
 
 dependencies:
   cryptography: ^2.5.0
