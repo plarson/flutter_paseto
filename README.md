@@ -47,9 +47,9 @@ Public mode tokens are unencrypted, and the module will verify the signature.
 
 ```dart
 main () async {
-  // An asymmetric ED25519 KeyPair to sign and verify the message.
-  final publicKey = SimplePublicKey([], type: KeyPairType.ed25519);
   // The public key from the asymmetric KeyPair used to sign the token.
+  final publicKey = SimplePublicKey([], type: KeyPairType.ed25519);
+  // The public signed Paseto token.
   const tokenString = 'v4.public.payloadBase64.footerBase64';
   // Turns the string into a Token object.
   final token = await Token.fromString(tokenString);
