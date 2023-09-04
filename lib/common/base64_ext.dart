@@ -20,7 +20,9 @@ Uint8List decodePasetoBase64(String rawBase64) {
   if (rawBase64.length % 4 > 0) {
     final decodedAndPadded = base64Url.decode(padPasetoBase64(rawBase64));
     return decodedAndPadded.sublist(
-        0, decodedAndPadded.length - (4 - rawBase64.length % 4));
+      0,
+      decodedAndPadded.length - (4 - rawBase64.length % 4),
+    );
   } else {
     return base64Url.decode(rawBase64);
   }

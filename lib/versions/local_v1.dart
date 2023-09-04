@@ -86,9 +86,6 @@ class LocalV1 {
     if (secretBox == null) {
       throw Exception('Missing secretBox');
     }
-    final cipher = AesCtr.with256bits(
-      macAlgorithm: Hmac.sha384(),
-    );
     final subkeys = await secretKey.deriveSubkeysV1(
       nonce: Mac(nonce.bytes.sublist(0, halfNonceLength)),
     );

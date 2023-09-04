@@ -292,17 +292,19 @@ class Token extends Equatable {
 
   static Uint8List _componentLengthBigIntToByteData(BigInt bigInt) {
     var value = bigInt.toUnsigned(64);
-    var str = '';
+    final buffer = StringBuffer();
     for (var i = 0; i < 8; i++) {
       if (i == 7) {
         value = value & BigInt.from(127).toUnsigned(64);
       }
-      str += String.fromCharCode(
-        (value & BigInt.from(255).toUnsigned(64)).toInt(),
+      buffer.write(
+        String.fromCharCode(
+          (value & BigInt.from(255).toUnsigned(64)).toInt(),
+        ),
       );
       value = value >> 8;
     }
-    return Uint8List.fromList(utf8.encode(str));
+    return Uint8List.fromList(utf8.encode(buffer.toString()));
   }
 
   @override

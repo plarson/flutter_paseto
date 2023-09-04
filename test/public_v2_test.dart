@@ -34,7 +34,8 @@ void main() {
   test('Test Vector v2-S-1', () async {
     final publicKey = SimplePublicKey(
       HEX.decode(
-          '1eb9dbbbbc047c03fd70604e0071f0987e16b28b757225c11f00415d0e20b1a2'),
+        '1eb9dbbbbc047c03fd70604e0071f0987e16b28b757225c11f00415d0e20b1a2',
+      ),
       type: KeyPairType.ed25519,
     );
     final token = await Token.fromString(
@@ -44,6 +45,7 @@ void main() {
     final message = await token.verifyPublicMessage(publicKey: publicKey);
     expect(
         message.stringContent,
+        // ignore: missing_whitespace_between_adjacent_strings
         '{"data":"this is a signed message",'
         '"exp":"2019-01-01T00:00:00+00:00"}');
   });
@@ -51,7 +53,8 @@ void main() {
   test('Test Vector v2-S-2', () async {
     final publicKey = SimplePublicKey(
       HEX.decode(
-          '1eb9dbbbbc047c03fd70604e0071f0987e16b28b757225c11f00415d0e20b1a2'),
+        '1eb9dbbbbc047c03fd70604e0071f0987e16b28b757225c11f00415d0e20b1a2',
+      ),
       type: KeyPairType.ed25519,
     );
     final token = await Token.fromString(
@@ -63,6 +66,7 @@ void main() {
     final message = await token.verifyPublicMessage(publicKey: publicKey);
     expect(
         message.stringContent,
+        // ignore: missing_whitespace_between_adjacent_strings
         '{"data":"this is a signed message",'
         '"exp":"2019-01-01T00:00:00+00:00"}');
   });

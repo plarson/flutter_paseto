@@ -64,12 +64,4 @@ void main() {
       'Paragon Initiative Enterprises',
     );
   });
-
-  test('largeData', () async {
-    final secretKey = SecretKey(
-      HEX.decode(
-        '707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f',
-      ),
-    );
-  });
 }
